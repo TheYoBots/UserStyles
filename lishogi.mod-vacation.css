@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Lishogi Mod Vacation
+@namespace      github.com/ornicar/userstyles/blob/master/lichess.mod-vacation.user.css
+@homepageURL    https://raw.githubusercontent.com/TheYoBots/userstyles/master/lishogi.mod-vacation.css
+@version        1.0.0
+@description    On lishogi.org, hide all moderation UI
+@author         ornicar / TheYoBots
+==/UserStyle== */
+
+@-moz-document domain("lichess.org") {
+
+#top .site-buttons a[title="Moderation"],
+a.trophy.award.moderator.icon3d,
+.mod-zone-toggle,
+.upt__mod,
+.mchat__messages .mod,
+.forum-topic__actions > div > form,
+.forum-post__metas .mod {
+  display: none !important;
+}
+
+}
