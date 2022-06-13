@@ -2,7 +2,7 @@
 @name           Lishogi - Portella with Red Promoted Pieces
 @namespace      userstyles.org/styles/220755/lishogi-portella-with-red-promoted-pieces
 @version        1.0.0
-@description    Portella single kanji piece set with Red Promoted Pieces | Piece set made by Portella | Lishogi.org
+@description    Portella single kanji piece set with Red Promoted Pieces | Piece set made by Portella | Thanks to Timezombi for a fix to this userstyle | Lishogi.org
 @author         Yohaan Nathan (TheYoBots)
 ==/UserStyle== */
 
@@ -163,26 +163,26 @@
   }
 
   piece.king.sente,
-      .cg-wrap.orientation-sente piece.king.sente,
-      .cg-wrap.orientation-gote piece.king.gote,
-      .pocket-bottom piece.king.gote,
-      .e-pocket-bottom piece.king.gote,
-      #promotion-choice.top piece.king,
-      .spare-bottom piece.king.gote
-  {
-    background-image: url("https://github.com/TheYoBots/test/blob/master/0GY.png?raw=true")!important;
-  }
-
-  piece.king.gote,
-      .cg-wrap.orientation-sente piece.king.gote,
-      .cg-wrap.orientation-gote piece.king.sente,
-      .pocket-top piece.king,
-      .e-pocket-top piece.king,
-      #promotion-choice.bottom piece.king,
-      .spare-top piece.king.sente
-  {
-    background-image: url("https://github.com/TheYoBots/test/blob/master/1GY.png?raw=true")!important;
-  }
+      /* Gyoku facing up */
+      .cg-wrap.orientation-sente piece.king.sente
+      {
+        background-image: url("https://github.com/TheYoBots/test/blob/master/0GY.png?raw=true")!important;
+      }
+      /* Ou facing up */
+      .cg-wrap.orientation-gote piece.king.gote, .spare-bottom piece.king.gote
+      {
+        background-image: url("https://github.com/TheYoBots/test/blob/master/0OU.png?raw=true")!important;
+      }
+      /* Gyoku facing down */
+      .cg-wrap.orientation-gote piece.king.sente, .spare-top piece.king.sente
+      {
+        background-image: url("https://github.com/TheYoBots/test/blob/master/1GY.png?raw=true")!important;
+      }
+      /* Ou facing down */
+      piece.king.gote, .cg-wrap.orientation-sente piece.king.gote
+      {
+        background-image: url("https://github.com/TheYoBots/test/blob/master/1OU.png?raw=true")!important;
+      }
 
   piece.tokin.sente,
       .cg-wrap.orientation-sente piece.tokin.sente,
